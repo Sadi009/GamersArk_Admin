@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Edit Event</title>
+  <link rel="stylesheet" href="css/adminPanel.css">
+  <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <!-- Side nav -->
+
+  <div class="sidebar">
+      <a href="AdminPanal.html"> Dashboard</a>
+      <a href="CustomerDetails.html"> Customer Details</a>
+      <a href="Product Details.html"> Product Details</a>
+      <a href="Parches Request.html"> Purches Requests</a>
+      <a href="Catagory.html"> Catagory</a>
+      <a href="Add Product.html"> Add Products</a>
+      <a href="Event Details.html"> Event Details</a>
+      <a href="Review.html"> New Review</a>
+      <a href="Send Email.html"> Send Email to users</a>
+    </div>
+
+    <!-- Top Nav -->
+  
+  <div class="admin-top-nav content">
+      <nav class="navbar navbar-expand-md navbar-dark">
+          <div class="container-fluid">
+              <img src="images/logo1.png" alt="logo" width="100px" height="100px">
+              <div class="options">
+                  <a href="#"><i class="fa fa-photo"></i> Admin</a>
+                  <a href="#"><i class="fa fa-sign-out"></i> Logout</a>
+              </div>
+          </div>
+      </nav>
+  </div>
+  
+  <!-- Edit Product -->
+  <div class="editProduct content">
+    <div class="col-sm-12 col-md-12">
+      <div class="container">
+
+        <form enctype="multipart/form-data" action="" method="post" runat="server">
+          <div class="form-group col-md-12 view-img">
+
+            <img id="add-img" src="#" height="260px" width="237px">
+            <br>
+            <br>
+            <input class="btn" type="file" name="image" accept="image/*" onchange="readURL(this);" />
+
+          </div>
+          <div class="form-group">
+            <label for="usr">Event Name:</label>
+            <input type="text" class="col-md-6 form-control" name="name" value="PUBG" required="1">
+          </div>
+          <div class="form-group">
+            <label for="comment">Event Description</label>
+            <textarea class="col-md-6 form-control" rows="5" name="details" required="1">Event Description</textarea>
+          </div>
+          <h3>Start time:</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <select required class="col-md-6 form-control" name="status">
+                      <option value="30" selected>Day</option>
+                      <option value="10">Staurday</option>
+                      <option value="20">Sunday</option>
+                      <option value="30">Monday</option>
+                      <option value="40">Tuesday</option>
+                      <option value="50">Wednesday</option>
+                      <option value="60">Thursday</option>
+                      <option value="70">Friday</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <select required class="col-md-6 form-control" name="status">
+                      <option value="30" selected>Hour</option>
+                      <option value="10">01</option>
+                      <option value="20">02</option>
+                      <option value="30">03</option>
+                      <option value="40">04</option>
+                      <option value="50">05</option>
+                      <option value="60">06</option>
+                      <option value="70">07</option>
+                      <option value="10">08</option>
+                      <option value="20">09</option>
+                      <option value="30">10</option>
+                      <option value="40">11</option>
+                      <option value="50">12</option>
+                      <option value="60">13</option>
+                      <option value="70">14</option>
+                      <option value="10">15</option>
+                      <option value="20">16</option>
+                      <option value="30">17</option>
+                      <option value="40">18</option>
+                      <option value="50">19</option>
+                      <option value="60">20</option>
+                      <option value="70">21</option>
+                      <option value="11">22</option>
+                      <option value="22">23</option>
+                      <option value="24">24</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <select required class="col-md-6 form-control" name="status">
+                      <option value="30" selected>Munite</option>
+                      <option value="10">10</option>
+                      <option value="20">20</option>
+                      <option value="30">30</option>
+                      <option value="40">40</option>
+                      <option value="50">50</option>
+
+                    </select>
+                  </div>
+            </div>
+        </div>
+        <h3>End time:</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <select required class="col-md-6 form-control" name="status">
+                      <option value="30" selected>Day</option>
+                      <option value="10">Staurday</option>
+                      <option value="20">Sunday</option>
+                      <option value="30">Monday</option>
+                      <option value="40">Tuesday</option>
+                      <option value="50">Wednesday</option>
+                      <option value="60">Thursday</option>
+                      <option value="70">Friday</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <select required class="col-md-6 form-control" name="status">
+                      <option value="30" selected>Hour</option>
+                      <option value="10">01</option>
+                      <option value="20">02</option>
+                      <option value="30">03</option>
+                      <option value="40">04</option>
+                      <option value="50">05</option>
+                      <option value="60">06</option>
+                      <option value="70">07</option>
+                      <option value="10">08</option>
+                      <option value="20">09</option>
+                      <option value="30">10</option>
+                      <option value="40">11</option>
+                      <option value="50">12</option>
+                      <option value="60">13</option>
+                      <option value="70">14</option>
+                      <option value="10">15</option>
+                      <option value="20">16</option>
+                      <option value="30">17</option>
+                      <option value="40">18</option>
+                      <option value="50">19</option>
+                      <option value="60">20</option>
+                      <option value="70">21</option>
+                      <option value="11">22</option>
+                      <option value="22">23</option>
+                      <option value="24">24</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <select required class="col-md-6 form-control" name="status">
+                      <option value="30" selected>Munite</option>
+                      <option value="10">10</option>
+                      <option value="20">20</option>
+                      <option value="30">30</option>
+                      <option value="40">40</option>
+                      <option value="50">50</option>
+
+                    </select>
+                  </div>
+            </div>
+        </div>
+          
+          <div class="baton">
+            <button class="btn" role="button" name="update"> Update </button>
+            <button type="button" class="btn" data-toggle="modal" data-target="#delete">Delete</button>
+          </div>
+        </form>
+
+        <!-- Modal -->
+        <div class="modal fade" id="delete" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Delete Product</h4>
+              </div>
+              <div class="modal-body">
+                <p>Are You Sure To Delete This Product?</p>
+              </div>
+              <div class="modal-footer">
+                <a href="edit.php?delete=15" class="btn btn-danger" role="button" name="delete"> Delete </a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+
+</html>
